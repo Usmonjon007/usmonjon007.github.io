@@ -8,8 +8,12 @@ const siteMode = localStorage.getItem("mode");
 
 // loader
 window.addEventListener("DOMContentLoaded", () => {
-    loader.classList.add("none");
-    loader.style.opacity = 0;
+    setTimeout(() => {
+        loader.style.opacity = 0;
+        setTimeout(() => {
+            loader.classList.add("none");
+        }, 300);
+    }, 1000);
 });
 
 // set website mode

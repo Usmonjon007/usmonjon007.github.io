@@ -47,6 +47,10 @@ body.dark {
     outline: none;
 }
 
+body.dark .btn {
+    color: var(--lightText);
+}
+
 /* default focus */
 
 *:focus {

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 500px;
+            background-color: #310080;
+            padding: 50px;
+            padding-top: 70px;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        form h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        form .inputs {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        form .inputs * {
+            width: 100%;
+            outline: none;
+        }
+
+        form .inputs input {
+            padding: 15px 20px;
+            background: #fff;
+            border: none;
+            font-weight: 600;
+        }
+
+        form .inputs input[type=email]::placeholder {
+            color: inherit;
+        }
+
+        form .inputs input[type=email]:invalid {
+            border: 1px solid #f00;
+            color: #f00;
+        }
+
+        form .inputs button {
+            padding: 15px 20px;
+            background: yellow;
+            font-size: 18px;
+            border: none;
+        }
+
+        @media screen and (max-width: 375px) {
+            form .title {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form" action="card.html">
+        <h1 class="title">Заполните форму,<br>
+            чтобы заказать звонок</h1>
+        <div class="inputs">
+            <input type="text" placeholder="Imya" required>
+            <input type="email" placeholder="Email" required>
+            <input type="number" placeholder="Telefon" pattern="[0-9]+" required="required">
+            <button type="submit">Zakazat Zvonok</button>
+        </div>
+    </form>
+</body>
+
+</html>
